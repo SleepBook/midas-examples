@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customVMPath" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/barstools/macros" />
+            <option value="$PROJECT_DIR$/barstools/macros/project" />
+            <option value="$PROJECT_DIR$/barstools/mdf/scalalib" />
+            <option value="$PROJECT_DIR$/barstools/mdf/scalalib/project" />
+            <option value="$PROJECT_DIR$/chisel" />
+            <option value="$PROJECT_DIR$/chisel/chiselFrontend" />
+            <option value="$PROJECT_DIR$/chisel/chiselFrontend/project" />
+            <option value="$PROJECT_DIR$/chisel/coreMacros" />
+            <option value="$PROJECT_DIR$/chisel/coreMacros/project" />
+            <option value="$PROJECT_DIR$/chisel/project" />
+            <option value="$PROJECT_DIR$/firrtl" />
+            <option value="$PROJECT_DIR$/firrtl/project" />
+            <option value="$PROJECT_DIR$/midas" />
+            <option value="$PROJECT_DIR$/midas/project" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/riscv-mini" />
+            <option value="$PROJECT_DIR$/riscv-mini/project" />
+            <option value="$PROJECT_DIR$/rocket-chip" />
+            <option value="$PROJECT_DIR$/rocket-chip/hardfloat" />
+            <option value="$PROJECT_DIR$/rocket-chip/hardfloat/project" />
+            <option value="$PROJECT_DIR$/rocket-chip/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="0.13.12" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>

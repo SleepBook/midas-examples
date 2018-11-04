@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/barstools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/barstools/mdf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chisel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/firrtl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/midas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/midas/src/main/cc/dramsim2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/platforms/zynq" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/platforms/zynq/zc706/fpga-images-zc706" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/platforms/zynq/zc706_MIG/fpga-images-zc706" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/platforms/zynq/zedboard/fpga-images-zedboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/platforms/zynq/zybo/fpga-images-zybo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip/chisel3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip/firrtl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip/hardfloat" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip/torture" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/addons/core-generator/rocketchip/rocket-chip/torture/env" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/barstools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/barstools/mdf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/firrtl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/pcad" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/pconfigure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/pson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plsi/src/tools/pyyaml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-mini" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-mini/chisel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-mini/firrtl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/boom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/chisel3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/firrtl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/hardfloat" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/torture" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rocket-chip/torture/env" vcs="Git" />
+  </component>
+</project>
