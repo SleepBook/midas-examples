@@ -24,6 +24,7 @@ object StroberExamples extends App {
   }
   def midasParams = root((platform match {
     case "zynq"     => new midas.ZynqConfig
+    case "catapult"     => new midas.CatapultConfig
   }).toInstance)
   args.head match {
     case "midas" =>
