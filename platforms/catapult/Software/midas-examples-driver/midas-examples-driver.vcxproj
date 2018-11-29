@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{CE318333-652F-400B-A0A9-E6E458CC3E0F}</ProjectGuid>
+    <RootNamespace>midasexamplesdriver</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\midas-examples-driver\dramsim2;$(SolutionDir)\midas-examples-driver\endpoints;$(SolutionDir)\midas-examples-driver\sample;$(SolutionDir)\midas-examples-driver\utils;$(SolutionDir)\midas-examples-driver;$(SolutionDir)\pthreads-w32-2-9-1-release\Pre-built.2\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NO_STORAGE;NO_OUTPUT;_CRT_SECURE_NO_WARNINGS;DEBUG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)\pthreads-w32-2-9-1-release\Pre-built.2\lib\x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dramsim2\AddressMapping.cpp" />
+    <ClCompile Include="dramsim2\Bank.cpp" />
+    <ClCompile Include="dramsim2\BankState.cpp" />
+    <ClCompile Include="dramsim2\BusPacket.cpp" />
+    <ClCompile Include="dramsim2\ClockDomain.cpp" />
+    <ClCompile Include="dramsim2\CommandQueue.cpp" />
+    <ClCompile Include="dramsim2\IniReader.cpp" />
+    <ClCompile Include="dramsim2\MemoryController.cpp" />
+    <ClCompile Include="dramsim2\MemorySystem.cpp" />
+    <ClCompile Include="dramsim2\MultiChannelMemorySystem.cpp" />
+    <ClCompile Include="dramsim2\PrintMacros.cpp" />
+    <ClCompile Include="dramsim2\Rank.cpp" />
+    <ClCompile Include="dramsim2\SimulatorObject.cpp" />
+    <ClCompile Include="dramsim2\TraceBasedSim.cpp" />
+    <ClCompile Include="dramsim2\Transaction.cpp" />
+    <ClCompile Include="endpoints\address_map.cc" />
+    <ClCompile Include="endpoints\fpga_memory_model.cc" />
+    <ClCompile Include="endpoints\sim_mem.cc" />
+    <ClCompile Include="sample\sample.cc" />
+    <ClCompile Include="sample\simif_sample.cc" />
+    <ClCompile Include="ShiftRegister-catapult.cc" />
+    <ClCompile Include="simif.cc" />
+    <ClCompile Include="simif_catapult.cc" />
+    <ClCompile Include="utils\biguint.cc" />
+    <ClCompile Include="utils\midas_context.cc" />
+    <ClCompile Include="utils\mm.cc" />
+    <ClCompile Include="utils\mm_dramsim2.cc" />
+    <ClCompile Include="utils\umi.cc" />
+    <ClCompile Include="utils\umi_dramsim2.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dramsim2\AddressMapping.h" />
+    <ClInclude Include="dramsim2\Bank.h" />
+    <ClInclude Include="dramsim2\BankState.h" />
+    <ClInclude Include="dramsim2\BusPacket.h" />
+    <ClInclude Include="dramsim2\Callback.h" />
+    <ClInclude Include="dramsim2\ClockDomain.h" />
+    <ClInclude Include="dramsim2\CommandQueue.h" />
+    <ClInclude Include="dramsim2\CSVWriter.h" />
+    <ClInclude Include="dramsim2\IniReader.h" />
+    <ClInclude Include="dramsim2\MemoryController.h" />
+    <ClInclude Include="dramsim2\MemorySystem.h" />
+    <ClInclude Include="dramsim2\MultiChannelMemorySystem.h" />
+    <ClInclude Include="dramsim2\PrintMacros.h" />
+    <ClInclude Include="dramsim2\Rank.h" />
+    <ClInclude Include="dramsim2\SimulatorObject.h" />
+    <ClInclude Include="dramsim2\SystemConfiguration.h" />
+    <ClInclude Include="dramsim2\Transaction.h" />
+    <ClInclude Include="endpoints\address_map.h" />
+    <ClInclude Include="endpoints\endpoint.h" />
+    <ClInclude Include="endpoints\fpga_memory_model.h" />
+    <ClInclude Include="endpoints\fpga_model.h" />
+    <ClInclude Include="endpoints\sim_mem.h" />
+    <ClInclude Include="sample\sample.h" />
+    <ClInclude Include="ShiftRegister-const.h" />
+    <ClInclude Include="ShiftRegister.h" />
+    <ClInclude Include="simif.h" />
+    <ClInclude Include="simif_catapult.h" />
+    <ClInclude Include="utils\biguint.h" />
+    <ClInclude Include="utils\midas_context.h" />
+    <ClInclude Include="utils\mm.h" />
+    <ClInclude Include="utils\mm_dramsim2.h" />
+    <ClInclude Include="utils\umi.h" />
+    <ClInclude Include="utils\umi_dramsim2.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
