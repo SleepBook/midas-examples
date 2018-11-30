@@ -11,6 +11,7 @@ project/target
 generated-src
 output
 publish
+.idea/
 
 
 # Created by https://www.gitignore.io/api/intellij
