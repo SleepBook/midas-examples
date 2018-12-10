@@ -46,6 +46,7 @@ static unsigned int OUTPUT_CHUNKS [1] = {
 #define DAISY_WIDTH 64
 #define SRAM_RESTART_ADDR 0
 #define REGFILE_RESTART_ADDR 1
+#define REG_INJECT_ADDR 2
 enum CHAIN_TYPE {TRACE_CHAIN,REGS_CHAIN,SRAM_CHAIN,REGFILE_CHAIN,CNTR_CHAIN,CHAIN_NUM};
 static unsigned int CHAIN_SIZE [5] = {
   1,
@@ -55,11 +56,11 @@ static unsigned int CHAIN_SIZE [5] = {
   1
 };
 static unsigned int CHAIN_ADDR [5] = {
-  3,
-  5,
-  7,
-  9,
-  11
+  4,
+  6,
+  8,
+  10,
+  12
 };
 // Wire Input Traces
 #define IN_TR_SIZE 2
