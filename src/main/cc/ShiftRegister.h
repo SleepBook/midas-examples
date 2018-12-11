@@ -1,6 +1,8 @@
 //See LICENSE for license details.
 
+#include <climits>
 #include "simif.h"
+
 
 class ShiftRegister_t: virtual simif_t
 {
@@ -8,7 +10,7 @@ public:
   void run() {
     std::vector<uint32_t> reg(4);
     target_reset();
-    for (int i = 0 ; i < 64 ; i++) {
+    for (int i = 0 ; i < 10000000 ; i++) {
       uint32_t in = rand_next(2);
       poke(io_in, in);
       step(1);

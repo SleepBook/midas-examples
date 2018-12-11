@@ -736,8 +736,8 @@ object PPLRegs3 {
 }
 
 class RA_Mul  extends Module {
-  val WIDTH=16
-  val TailAdderWIDTH= 32
+  val WIDTH=32
+  val TailAdderWIDTH= 64
   val io = IO(new Bundle {
     val P = Output(UInt((WIDTH*2).W))
     val B = Input(UInt(WIDTH.W))
