@@ -39,7 +39,8 @@ struct sample_inst_t {
 struct step_t: sample_inst_t {
   step_t(size_t n_): n(n_) { }
   std::ostream& dump(std::ostream &os) const {
-    return os << STEP << " " << n << std::endl;
+	  //return os << STEP << " " << n << std::endl;
+	  return os << "STEP" << " " << n << std::endl;
   }
   const size_t n;
 };
@@ -62,7 +63,8 @@ struct load_t: sample_inst_t {
     free(value_str);
     return os;
 #else
-    return os << LOAD << " " << type << " " << id << " " << value->str() << " " << idx << std::endl;
+	  //return os << LOAD << " " << type << " " << id << " " << value->str() << " " << idx << std::endl;
+	  return os << "LOAD" << " " << type << " " << id << " " << value->str() << " " << idx << std::endl;
 #endif
   }
 
@@ -90,7 +92,8 @@ struct force_t: sample_inst_t {
     free(value_str);
     return os;
 #else
-    return os << FORCE << " " << type << " " << id << " " << value->str() << std::endl;
+	  //return os << FORCE << " " << type << " " << id << " " << value->str() << std::endl;
+	  return os << "FORCE" << " " << type << " " << id << " " << value->str() << std::endl;
 #endif
   }
 
@@ -117,7 +120,8 @@ struct poke_t: sample_inst_t {
     free(value_str);
     return os;
 #else
-    return os << POKE << " " << type << " " << id << " " << value->str() << std::endl;
+	  //return os << POKE << " " << type << " " << id << " " << value->str() << std::endl;
+	  return os << "POKE" << " " << type << " " << id << " " << value->str() << std::endl;
 #endif
   }
 
@@ -144,7 +148,8 @@ struct expect_t: sample_inst_t {
     free(value_str);
     return os;
 #else
-    return os << EXPECT << " " << type << " " << id << " " << value->str() << std::endl;
+	  //return os << EXPECT << " " << type << " " << id << " " << value->str() << std::endl;
+	  return os << "EXPECT" << " " << type << " " << id << " " << value->str() << std::endl;
 #endif
   }
 
@@ -171,7 +176,8 @@ struct count_t: sample_inst_t {
     free(value_str);
     return os;
 #else
-    return os << COUNT << " " << type << " " << id << " " << value->str() << std::endl;
+	  //return os << COUNT << " " << type << " " << id << " " << value->str() << std::endl;
+	  return os << "COUNT" << " " << type << " " << id << " " << value->str() << std::endl;
 #endif
   }
 

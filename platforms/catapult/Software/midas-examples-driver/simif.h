@@ -58,7 +58,7 @@ class simif_t
     // Simulation APIs
     virtual void init(int argc, char** argv, bool log = false);
     virtual int finish();
-    virtual void step(int n, bool blocking = true);
+    virtual void step(int n, bool blocking = true, bool insert = false);
     inline bool done() { return read(MASTER(DONE)); }
 
     // Widget communication
@@ -118,6 +118,7 @@ class simif_t
     size_t sample_num;
     size_t last_sample_id;
     std::string sample_file;
+	uint64_t**** last_snapshot;
 
     size_t trace_count;
 
@@ -130,6 +131,7 @@ class simif_t
     void init_sampling(int argc, char** argv);
     void finish_sampling();
     void reservoir_sampling(size_t n);
+	void insert_sampling();
     size_t trace_ready_valid_bits(
       sample_t* sample, bool poke, size_t id, size_t bits_id);
     inline void save_sample();

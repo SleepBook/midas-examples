@@ -62,6 +62,13 @@ static unsigned int CHAIN_ADDR [5] = {
   10,
   12
 };
+static unsigned int CHAIN_WRADDR [5] = {
+  3,
+  5,
+  7,
+  9,
+  11
+};
 // Wire Input Traces
 #define IN_TR_SIZE 2
 static unsigned int IN_TR_ADDRS [2] = {
