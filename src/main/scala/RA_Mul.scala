@@ -740,9 +740,11 @@ class RA_Mul  extends Module {
   val TailAdderWIDTH= 64
   val io = IO(new Bundle {
     val P = Output(UInt((WIDTH*2).W))
-    val B = Input(UInt(WIDTH.W))
-    val A = Input(UInt(WIDTH.W))
+    //val B = Input(UInt(WIDTH.W))
+    //val A = Input(UInt(WIDTH.W))
   })
+  val A = Wire(UInt(WIDTH.W))
+  val B = Wire(UInt(WIDTH.W))
   val PP = Wire(Vec(WIDTH/2, UInt(WIDTH.W)))
   val SS = Wire(UInt(WIDTH.W))
   val SC = Wire(UInt((WIDTH/2).W))
@@ -761,8 +763,11 @@ class RA_Mul  extends Module {
   val matrix_o4_o = Wire(Vec(2, Vec(WIDTH * 2, Bool())))
   val P = Wire(UInt((WIDTH*2).W))
 
-  BoothEncoder_radix4(io.B, eB, WIDTH)
-  PPGen(io.A, eB, PP, SS, SC, S, WIDTH)
+  val input_gen = Module(new LSFR_NEW)
+  A := input_gen.io.out
+  B := input_gen.io.out
+  BoothEncoder_radix4(B, eB, WIDTH)
+  PPGen(A, eB, PP, SS, SC, S, WIDTH)
   PPLRegs1(PP, SS, SC, S, PP_o, SS_o, SC_o, S_o, WIDTH)
 
   Reduction_1(PP_o, SS_o, SC_o, S_o, matrix_o1, WIDTH, 6)
