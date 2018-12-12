@@ -73,6 +73,21 @@ void simif_t::target_reset(int pulse_start, int pulse_length) {
 int simif_t::finish() {
 #ifdef ENABLE_SNAPSHOT
   finish_sampling();
+  for (size_t t = 0; t < CHAIN_NUM; t++) {
+	  CHAIN_TYPE type = static_cast<CHAIN_TYPE>(t);
+	  const size_t chain_loop = sample_t::get_chain_loop(type);
+	  const size_t chain_len = sample_t::get_chain_len(type);
+	  if (chain_loop > 0) {
+		  for (size_t k = 0; k < chain_loop; k++) {
+			  for (size_t i = 0; i < CHAIN_SIZE[t]; i++) {
+                delete[] last_snapshot[t][k][i];
+			  }
+			  delete[] last_snapshot[t][k];
+		  }
+		  delete[] last_snapshot[t];
+	  }
+  }
+  delete[] last_snapshot;
 #endif
 
   fprintf(stderr, "Runs %llu cycles\n", cycles());
@@ -171,11 +186,12 @@ bool simif_t::expect(size_t id, biguint_t& expected) {
   return expect(pass, NULL);
 }
 
-void simif_t::step(int n, bool blocking) {
+void simif_t::step(int n, bool blocking, bool insert) {
   if (n == 0) return;
   assert(n > 0);
 #ifdef ENABLE_SNAPSHOT
   reservoir_sampling(n);
+  if (insert) insert_sampling();
 #endif
   // take steps
   if (log) fprintf(stderr, "* STEP %d -> %llu *\n", n, (t + n));

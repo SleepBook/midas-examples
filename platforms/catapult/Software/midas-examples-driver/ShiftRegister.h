@@ -21,13 +21,18 @@ public:
 	  poke(io_in, in);
 	  // Do handshake once
 	  // Increment timestamp
-	  step(1);
+	  step(1, true, true);
 	  // After the 4th iteration,
 	  // Check if the value read from output channel "io_out" (addr 22) equals to reg[3]
 	  if (cycles() > 4) expect(io_out, reg[3]);
 	  // Shift the reference register value
-      for (int j = 3 ; j > 0 ; j--) reg[j] = reg[j-1];
-      reg[0] = in;
+	  if (i == 31) {
+		  for (int j = 0; j < 4; j++) reg[j] = 1;
+	  }
+	  else {
+		  for (int j = 3; j > 0; j--) reg[j] = reg[j - 1];
+		  reg[0] = in;
+	  }
     } 
   }
 };

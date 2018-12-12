@@ -28,14 +28,14 @@ simif_catapult_t::~simif_catapult_t() {
 
 void simif_catapult_t::write(size_t addr, uint64_t data) {
   //catapult_softreg_write(addr, data);
-	printf("write %lld to addr: %d\n", data, addr);
+	//printf("write %lld to addr: %d\n", data, addr);
 	FPGA_WriteSoftRegister(fpgaHandle, addr, data);
 }
 
 uint64_t simif_catapult_t::read(size_t addr) {
 	uint64_t value;
 	FPGA_ReadSoftRegister(fpgaHandle, addr, &value);
-	printf("read %lld from addr: %d\n", value, addr);
+	//printf("read %lld from addr: %d\n", value, addr);
 	return value;
   //return catapult_softreg_read(addr);
 }
